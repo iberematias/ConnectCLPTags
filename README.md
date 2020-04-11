@@ -56,55 +56,55 @@ id  | version | vp         | datahora                 | tag_real_id
 
 Esquema SQL
 
-CREATE TABLE public.grupo
-(
-    id bigint NOT NULL,
-    version bigint NOT NULL,
-    descricao character varying(255) COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT grupo_pkey PRIMARY KEY (id)
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
+CREATE TABLE public.grupo <br /> 
+( <br />
+    id bigint NOT NULL, <br />
+    version bigint NOT NULL, <br />
+    descricao character varying(255) COLLATE pg_catalog."default" NOT NULL, <br />
+    CONSTRAINT grupo_pkey PRIMARY KEY (id) <br />
+) <br />
+WITH ( <br />
+    OIDS = FALSE <br />
+) <br />
+TABLESPACE pg_default; <br />
 
 
-CREATE TABLE public.tag
-(
-    id bigint NOT NULL,
-    version bigint NOT NULL,
-    ativo boolean DEFAULT true,
-    grupo_id bigint,
-    nome character varying(255) COLLATE pg_catalog."default" NOT NULL,
-    datahora_status timestamp without time zone,
-    tipo character varying(50) COLLATE pg_catalog."default",
-    descricao character varying(255) COLLATE pg_catalog."default",
-    CONSTRAINT tag_pkey PRIMARY KEY (id),
-    CONSTRAINT fk3813200ab3211591 FOREIGN KEY (grupo_id)
-        REFERENCES public.grupo (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
+CREATE TABLE public.tag <br />
+( <br />
+    id bigint NOT NULL, <br />
+    version bigint NOT NULL, <br />
+    ativo boolean DEFAULT true, <br />
+    grupo_id bigint, <br />
+    nome character varying(255) COLLATE pg_catalog."default" NOT NULL, <br />
+    datahora_status timestamp without time zone, <br />
+    tipo character varying(50) COLLATE pg_catalog."default", <br />
+    descricao character varying(255) COLLATE pg_catalog."default", <br />
+    CONSTRAINT tag_pkey PRIMARY KEY (id), <br />
+    CONSTRAINT fk3813200ab3211591 FOREIGN KEY (grupo_id) <br />
+        REFERENCES public.grupo (id) MATCH SIMPLE <br />
+        ON UPDATE NO ACTION <br />
+        ON DELETE NO ACTION <br />
+) <br />
+WITH ( <br />
+    OIDS = FALSE <br />
+) <br />
+TABLESPACE pg_default; <br />
 
-CREATE TABLE public.medicao_vp
-(
-    id bigint NOT NULL,
-    version bigint NOT NULL,
-    vp numeric(19,4),
-    datahora timestamp without time zone NOT NULL,
-    tag_real_id bigint NOT NULL,
-    CONSTRAINT medicao_vp_pkey PRIMARY KEY (id),
-    CONSTRAINT medicao_vp_datahora_tag_real_id_key UNIQUE (datahora, tag_real_id),
-    CONSTRAINT fk38131a9478c23426vp FOREIGN KEY (tag_real_id)
-        REFERENCES public.tag (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-WITH (
-    OIDS = FALSE
-)
-TABLESPACE pg_default;
+CREATE TABLE public.medicao_vp <br />
+( <br />
+    id bigint NOT NULL, <br />
+    version bigint NOT NULL, <br />
+    vp numeric(19,4), <br />
+    datahora timestamp without time zone NOT NULL, <br />
+    tag_real_id bigint NOT NULL, <br />
+    CONSTRAINT medicao_vp_pkey PRIMARY KEY (id), <br />
+    CONSTRAINT medicao_vp_datahora_tag_real_id_key UNIQUE (datahora, tag_real_id), <br />
+    CONSTRAINT fk38131a9478c23426vp FOREIGN KEY (tag_real_id) <br />
+        REFERENCES public.tag (id) MATCH SIMPLE <br />
+        ON UPDATE NO ACTION <br />
+        ON DELETE NO ACTION <br />
+) <br />
+WITH ( <br />
+    OIDS = FALSE <br />
+) <br />
+TABLESPACE pg_default; <br />
