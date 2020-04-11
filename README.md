@@ -43,8 +43,9 @@ vp = process variables (numeric(19,4)
 
 Tabela [tag]
 
-CAMPOS = id | version | ativo | id | nome                    | datahora_status | tipo | descricao <br />
-DADOS  = 37	| 0	      | true  |	1  | F_INV_GEN[0].REFFERENCE | null            | REAL |	REFERENCIA DE VELOCIDADE ESTEIRA DO FORNO
+id | version | ativo | id | nome                    | datahora_status | tipo | descricao
+--- | --- | --- | --- | --- | --- | --- | ---
+37	| 0	      | true  |	1  | F_INV_GEN[0].REFFERENCE | null            | REAL |	REFERENCIA DE VELOCIDADE ESTEIRA DO FORNO
 
 Tabela [medicao_vp]
 
