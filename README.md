@@ -1,5 +1,5 @@
-# SOFTWARE DE AQUISIÇÃO DE DADOS DE CLP (Controlador Lógico Programável) / PLC (Programmable Logic Controller)  
-![](https://github.com/iberematias/be-the-hero/src/assets/bth.png) 
+# Software de Aquisição de Dados de Controlador Lógico Programável, Programmable Logic Controller.  
+![](https://github.com/iberematias/ConnectCLPTags/blob/master/src/assets/logo.png)
 
 A estrutura deste software é a base de muitos outros que uso para aquisição de dados, 
 sejam para gerenciamento de energia ou de produção na industria 4.0.
@@ -32,23 +32,25 @@ Utilizei esse projeto em 3 máquinas: Rapiberry PI 3 ARMv8 1GB. Windows Server 2
 A tabela [grupo] foi criada apenas para organização das tags na tabela de medições.
 Os campos version nas tabelas são para controle de versão das estruturas de dados, fique avontade para remover, alterar este e quaisquer outros.
 
+*******
+
 <div id='bancodedados'/>  
 
 ## BANCO DE DADOS  
 
-Exemplo de dados
+Exemplo de dados.
 vp = process variables (numeric(19,4)
 
 Tabela [tag]
 
-CAMPOS = id | version | ativo | id | nome                    | datahora_status | tipo | descricao
+CAMPOS = id | version | ativo | id | nome                    | datahora_status | tipo | descricao \n
 DADOS  = 37	| 0	      | true  |	1  | F_INV_GEN[0].REFFERENCE | null            | REAL |	REFERENCIA DE VELOCIDADE ESTEIRA DO FORNO
 
 Tabela [medicao_vp]
 
-CAMPOS = id  | version | vp         | datahora                 | tag_real_id
-DADOS  = 68	 |  0	   | 10526.0000	| 2018-11-30 11:23:53.373  | 4 
-DADOS  = 268 |	0	   | 15.6094	| 2018-11-30 11:32:57.701  | 18
+CAMPOS = id  | version | vp         | datahora                 | tag_real_id \n
+DADOS  = 68	 |  0	   | 10526.0000	| 2018-11-30 11:23:53.373  | 4  \n
+DADOS  = 268 |	0	   | 15.6094	| 2018-11-30 11:32:57.701  | 18 \n
 
 Esquema SQL
 
