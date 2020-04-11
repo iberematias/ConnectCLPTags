@@ -49,9 +49,10 @@ id | version | ativo | id | nome                    | datahora_status | tipo | d
 
 Tabela [medicao_vp]
 
-CAMPOS = id  | version | vp         | datahora                 | tag_real_id <br />
-DADOS  = 68	 |  0	   | 10526.0000	| 2018-11-30 11:23:53.373  | 4  <br />
-DADOS  = 268 |	0	   | 15.6094	| 2018-11-30 11:32:57.701  | 18 
+id  | version | vp         | datahora                 | tag_real_id 
+--- | --- | --- | --- | ---  
+68	 |  0	   | 10526.0000	| 2018-11-30 11:23:53.373  | 4  
+268 |	0	   | 15.6094	| 2018-11-30 11:32:57.701  | 18 
 
 Esquema SQL
 
