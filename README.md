@@ -43,14 +43,14 @@ vp = process variables (numeric(19,4)
 
 Tabela [tag]
 
-CAMPOS = id | version | ativo | id | nome                    | datahora_status | tipo | descricao \n
+CAMPOS = id | version | ativo | id | nome                    | datahora_status | tipo | descricao <br />
 DADOS  = 37	| 0	      | true  |	1  | F_INV_GEN[0].REFFERENCE | null            | REAL |	REFERENCIA DE VELOCIDADE ESTEIRA DO FORNO
 
 Tabela [medicao_vp]
 
-CAMPOS = id  | version | vp         | datahora                 | tag_real_id \n
-DADOS  = 68	 |  0	   | 10526.0000	| 2018-11-30 11:23:53.373  | 4  \n
-DADOS  = 268 |	0	   | 15.6094	| 2018-11-30 11:32:57.701  | 18 \n
+CAMPOS = id  | version | vp         | datahora                 | tag_real_id <br />
+DADOS  = 68	 |  0	   | 10526.0000	| 2018-11-30 11:23:53.373  | 4  <br />
+DADOS  = 268 |	0	   | 15.6094	| 2018-11-30 11:32:57.701  | 18 
 
 Esquema SQL
 
